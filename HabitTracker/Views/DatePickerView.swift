@@ -41,6 +41,7 @@ struct DatePickerView: View {
                             }
                             .padding(.bottom, 27)
                             .buttonStyle(.borderedProminent)
+                            .shadow(color: .black, radius: 2, x: 1, y: 1)
                         }
                         
                         Button {
@@ -53,6 +54,7 @@ struct DatePickerView: View {
                         }
                         .padding(.bottom, 27)
                         .buttonStyle(.borderedProminent)
+                        .shadow(color: .black, radius: 2, x: 1, y: 1)
                         .tint(color)
                     }
                 }

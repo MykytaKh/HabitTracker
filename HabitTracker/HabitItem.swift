@@ -26,7 +26,8 @@ struct HabitItem: Identifiable, Codable {
     }
     
     func getResult(for date: Date) -> String {
-        String("\(results[date, default: 0].formatted())/\(goal.formatted())")
+        guard !unit.isEmpty, goal != 1 else { return "" }
+        return String("\(results[date, default: 0].formatted())/\(goal.formatted())")
     }
     
     func getColorValue(for date: Date) -> Double {

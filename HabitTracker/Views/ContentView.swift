@@ -62,7 +62,12 @@ struct ContentView: View {
                 
                 Spacer()
                 
-                Text(habit.getResult(for: selectedDate))
+                VStack {
+                    Text(habit.getResult(for: selectedDate))
+                 
+                    Text(habit.unit)
+                        .font(.caption2)
+                }
             }
             .listRowBackground(
                 RoundedRectangle(cornerRadius: 10)
